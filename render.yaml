@@ -1,10 +1,12 @@
+build:
+  pythonVersion: 3.11.8
+
 services:
   - type: web
     name: my-django-galler
-    env: python
+    runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn myproject.wsgi:application
-    pythonVersion: 3.11.8
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: myproject.settings
@@ -12,5 +14,6 @@ services:
         value: your-secret-key
       - key: ALLOWED_HOSTS
         value: my-django-galler.onrender.com
+
 
 
