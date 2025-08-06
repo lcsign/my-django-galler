@@ -1,3 +1,5 @@
+setuptools>=68.0.0
+wheel>=0.42.0
 Django==5.2.4
 Scrapy==2.13.3
 requests==2.32.4
